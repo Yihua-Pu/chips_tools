@@ -1,0 +1,28 @@
+{
+  "games": [
+    {
+      "title": "Chip’s Challenge",
+      "platform": {
+        "launch_year": 1989,
+        "name": "Atari Lynx"
+      },
+      "year": 1989
+    },
+    {
+      "title": "Chip’s Challenge 2",
+      "platform": {
+        "launch_year": 2003,
+        "name": "Steam"
+      },
+      "year": 2015
+    },
+    {
+      "title": "Apex",
+      "platform": {
+        "launch_year": 2024,
+        "name": "Epic Steam"
+      },
+      "year": 2024
+    }
+  ]
+}
