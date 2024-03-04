@@ -18,8 +18,13 @@ def json_to_cc(json_data):
         level.time = level_data["time"]
         level.num_chips = level_data["num_chips"]
         level.upper_layer = level_data["upper_layer"]
-        level.lower_layer = level_data["lower_layer"]
 
+        field = cc_classes.CCMapTitleField(level_data["title"])
+        level.add_field(field)
+
+        field = cc_classes.CCEncodedPasswordField(level_data["password"])
+        level.add_field(field)
+        """""
         for field_data in level_data["optional_fields"]:
             field = None
             if field_data["field_type"] == "mapTitle":
@@ -35,6 +40,7 @@ def json_to_cc(json_data):
 
             if field is not None:
                 level.add_field(field)
+        """
         level_pack.add_level(level)
     return level_pack
 
@@ -42,7 +48,7 @@ def json_to_cc(json_data):
 #Load your custom JSON file
 #Convert JSON data to CCLevelPack
 #Save converted data to DAT file
-json_file = "data/yihuapu_cc1.json"
+json_file = "data/yihuapu_cclevel_pack.json"
 json_data = load_json_data(json_file)
 cc_level_pack = json_to_cc(json_data)
 dat_file = "data/yihuapu_cc1.dat"
